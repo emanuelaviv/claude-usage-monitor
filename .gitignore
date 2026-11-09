@@ -1,0 +1,18 @@
+# Local only, never published:
+# data/ holds your usage history, handoffs, switch decisions and snips (the raw snip shows a real status line);
+# reports/ holds what the monitor measured in your sessions; research/ holds the research notes and reports.
+data/
+reports/
+research/
+# working notes handed between sessions
+HANDOFF_*.md
+__pycache__/
+*.pyc
+# your own, unpublished versions of files (e.g. the full DESIGN.md)
+*.local.md
+# built packages (the .plugin file you add to the Claude app for Cowork)
+dist/
+# type files Claude Code writes into a plugin folder it loads for development; they include the list of the MCP
+# tools your session has connected
+**/.claude-plugin/types/
+mod/*/tsconfig.json

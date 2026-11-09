@@ -1,0 +1,1 @@
+{"name":"switch-advisor","version":"0.4.0","description":"Says when a new conversation is cheaper than resending this one, and builds its first prompt locally. Makes no model calls.","author":{"name":"Aviv Emanuel"},"license":"MIT","types":"./types/index.d.ts"}

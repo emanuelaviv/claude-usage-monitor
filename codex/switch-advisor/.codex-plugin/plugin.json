@@ -1,0 +1,19 @@
+{
+  "name": "switch-advisor",
+  "version": "0.1.0",
+  "description": "Back at a large Codex conversation after a break? Says whether a new conversation started from a handoff is cheaper than re-sending this one. Local; no model calls.",
+  "author": { "name": "Aviv Emanuel" },
+  "homepage": "https://github.com/emanuelaviv/claude-usage-monitor",
+  "repository": "https://github.com/emanuelaviv/claude-usage-monitor",
+  "license": "MIT",
+  "keywords": ["usage", "cost", "prompt cache", "handoff", "weekly limit"],
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Switch advisor",
+    "shortDescription": "Cost check when you return to a large conversation",
+    "longDescription": "When you come back to a large Codex conversation after a break, its prompt cache has often expired, so your next message re-reads the whole conversation at the full input price. Switch advisor compares that with starting a new conversation from a handoff built locally from this one, and holds your prompt back only when switching clearly pays. No model calls.",
+    "developerName": "Aviv Emanuel",
+    "category": "Productivity",
+    "capabilities": ["Read"]
+  }
+}

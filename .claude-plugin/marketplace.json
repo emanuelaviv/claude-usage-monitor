@@ -1,0 +1,12 @@
+{
+  "name": "claude-usage-monitor",
+  "description": "Local tools for Claude Code usage: switch-advisor says when a new conversation is cheaper than re-sending this one.",
+  "owner": { "name": "Aviv Emanuel" },
+  "plugins": [
+    {
+      "name": "switch-advisor",
+      "source": "./mod/switch-advisor",
+      "description": "Says when a new conversation is cheaper than resending this one, and builds its first prompt locally. Makes no model calls."
+    }
+  ]
+}

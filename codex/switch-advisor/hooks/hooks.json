@@ -1,0 +1,21 @@
+{
+  "description": "switch-advisor: a cost check on prompts sent after a break, and the handoff for a new conversation.",
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command",
+        "command": "python3 \"${PLUGIN_ROOT}/hooks/prompt_submit.py\"",
+        "commandWindows": "python \"${PLUGIN_ROOT}\\hooks\\prompt_submit.py\"",
+        "timeout": 30 } ] }
+    ],
+    "SessionStart": [
+      { "matcher": "startup|clear", "hooks": [ { "type": "command",
+        "command": "python3 \"${PLUGIN_ROOT}/hooks/session_start.py\"",
+        "commandWindows": "python \"${PLUGIN_ROOT}\\hooks\\session_start.py\"",
+        "timeout": 30, "additionalContextLimit": 6000 } ] },
+      { "matcher": "startup|resume|clear", "hooks": [ { "type": "command",
+        "command": "python3 \"${PLUGIN_ROOT}/hooks/refresh_rate.py\"",
+        "commandWindows": "python \"${PLUGIN_ROOT}\\hooks\\refresh_rate.py\"",
+        "async": true, "timeout": 120 } ] }
+    ]
+  }
+}
