@@ -57,6 +57,9 @@ your account, open Customize › Plugins in the Claude app, choose Add, then eit
 - or Upload plugin, and pick the file that `python tools/package_plugin.py` builds in `dist/`. To update it, upload
   the new file and choose Replace.
 
+Adding plugins there may be open only to company accounts. If yours doesn't offer it, use the plugin in Claude Code:
+the terminal or the desktop app's Code tab.
+
 It can do less in Cowork. New Cowork tasks run in Anthropic's cloud, where nothing a plugin draws appears. A local
 task's view doesn't show the band, the status line or toasts either (desktop app 4.23118). And Cowork starts Claude
 Code anew for each message, so nothing runs during a break to put the band up. What can work there is the card when
